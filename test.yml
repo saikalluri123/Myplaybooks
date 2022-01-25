@@ -1,0 +1,11 @@
+---
+- name: This Playbook is to install a package
+  hosts: all
+  become: yes
+
+  tasks:
+  - name: Installing httpd package
+    yum:
+      name: httpd
+      state: present
+    ignore_errors: yes
